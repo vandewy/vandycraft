@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "vandycraft": {
+    "AngWebsite": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/vandycraft",
+            "outputPath": "dist/AngWebsite",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,9 +23,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/vandycreated.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -50,18 +54,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "vandycraft:build"
+            "browserTarget": "AngWebsite:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "vandycraft:build:production"
+              "browserTarget": "AngWebsite:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "vandycraft:build"
+            "browserTarget": "AngWebsite:build"
           }
         },
         "test": {
@@ -95,7 +99,7 @@
         }
       }
     },
-    "vandycraft-e2e": {
+    "AngWebsite-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +107,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "vandycraft:serve"
+            "devServerTarget": "AngWebsite:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "vandycraft:serve:production"
+              "devServerTarget": "AngWebsite:serve:production"
             }
           }
         },
@@ -123,5 +127,5 @@
       }
     }
   },
-  "defaultProject": "vandycraft"
+  "defaultProject": "AngWebsite"
 }
